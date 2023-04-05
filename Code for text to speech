@@ -1,1 +1,17 @@
+import pyttsx3
 
+# Initialize the text-to-speech engine
+engine = pyttsx3.init()
+
+# Set the properties for the voice
+engine.setProperty('rate', 150)  # Speed in words per minute
+engine.setProperty('volume', 1)  # Volume level (0-1)
+
+# Define the text to be spoken
+text = "Hello, world! This is a test of text-to-speech conversion in Python."
+
+# Speak the text
+engine.say(text)
+
+# Wait for the text to be spoken
+engine.runAndWait()
